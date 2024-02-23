@@ -62,7 +62,10 @@ resource "aws_security_group" "spacelift_sg" {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = formatlist("%s/32", tolist(data.spacelift_ips.spacelift_public_ips.ips))
+    cidr_blocks = {
+     "3.248.70.24",
+     "34.246.213.75",
+     "52.49.218.181"
   }
 
   egress {
