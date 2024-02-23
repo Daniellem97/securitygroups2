@@ -58,26 +58,26 @@ resource "aws_security_group" "spacelift_sg" {
   name        = "spacelift-sg"
   description = "Allows communication with Spacelift using fixed IPs"
   vpc_id      = aws_vpc.mtc_vpc.id
- ingress {
+  
+  ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = {
-     "34.246.213.75/32"
+    cidr_blocks = ["34.246.213.75/32"]
   }
- ingress {
+  
+  ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = {
-     "52.49.218.181/32"
+    cidr_blocks = ["52.49.218.181/32"]
   }
- ingress {
+  
+  ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = {
-     "3.248.70.24/32"
+    cidr_blocks = ["3.248.70.24/32"]
   }
   egress {
     from_port   = 443
