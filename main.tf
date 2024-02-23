@@ -63,11 +63,22 @@ resource "aws_security_group" "spacelift_sg" {
     to_port     = 443
     protocol    = "tcp"
     cidr_blocks = {
-     "3.248.70.24",
-     "34.246.213.75",
-     "52.49.218.181"
+     "34.246.213.75/32"
   }
-
+ ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = {
+     "52.49.218.181/32"
+  }
+ ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = {
+     "3.248.70.24/32"
+  }
   egress {
     from_port   = 443
     to_port     = 443
