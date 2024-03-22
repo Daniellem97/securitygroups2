@@ -11,6 +11,13 @@ provider "aws" {
   region = "eu-west-1" 
 }
 
+provider "aws" {
+  assume_role_with_web_identity {
+    role_arn = var.aws_role_arn
+    web_identity_token_file = "/mnt/workspace/spacelift.oidc"
+  }
+}
+
 resource "aws_vpc" "mtc_vpc" {
   cidr_block           = "10.123.0.0/16"
   enable_dns_hostnames = true
