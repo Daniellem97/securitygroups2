@@ -14,7 +14,7 @@ provider "aws" {
   }
 }
 
-resource "aws_s3_bucket" "asfdgfds" {
+resource "aws_s3_bucket" "asfdgfds2" {
   bucket = "asfdgfds"
 
   tags = {
