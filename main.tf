@@ -15,6 +15,10 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "asfdgfds2" {
-  bucket = "asfdgfds212"
+  bucket = "asfdgfds234"
 
   tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
