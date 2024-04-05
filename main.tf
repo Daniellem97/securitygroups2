@@ -13,12 +13,3 @@ provider "aws" {
     web_identity_token_file = "/mnt/workspace/spacelift.oidc"
   }
 }
-
-resource "aws_s3_bucket" "asfdgfds2" {
-  bucket = "asfdgfds"
-
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
-}
