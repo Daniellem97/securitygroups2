@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     spacelift = {
-      source  = "spacelift-io/spacelift"
+      source  = "spacelift"
       version = "1.8.0"
     }
     aws = {
