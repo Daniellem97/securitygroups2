@@ -11,8 +11,8 @@ terraform {
   }
 }
 
-resource "aws_s3_bucket" "asfdgfds2" {
-  bucket = "asfdgfds234"
+resource "aws_s3_bucket" "asfdgfds21" {
+  bucket = "asfdgfds2134"
 
   tags = {
     Name        = "My bucket"
