@@ -11,6 +11,10 @@ terraform {
   }
 }
 
+aws = {
+region = "us-east-1"
+}
+
 resource "aws_s3_bucket" "asfdgfds2" {
   bucket = "asfdgfds234"
 
