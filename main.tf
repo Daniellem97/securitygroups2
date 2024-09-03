@@ -16,6 +16,6 @@ resource "aws_s3_bucket" "asfdgfds2" {
 
   tags = {
     Name        = "My bucket"
-    Environment = "Dev"
+    Environment = "Devtestupdate"
   }
 }
